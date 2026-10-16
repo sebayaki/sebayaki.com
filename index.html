@@ -3,261 +3,209 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#000" />
     <title>sebayaki — on-chain experiments</title>
     <meta
       name="description"
       content="A playground for on-chain experiments and side projects"
     />
     <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="container">
-      <header class="header">
-        <div class="logo-wrapper">
-          <div class="logo">sebayaki.eth</div>
-        </div>
-        <div class="header-links">
-          <a href="https://github.com/sebayaki" target="_blank" rel="noopener"
-            >GitHub</a
-          >
-          <a href="https://farcaster.xyz/if" target="_blank" rel="noopener"
-            >Farcaster</a
-          >
-          <a href="https://x.com/0xsebayaki" target="_blank" rel="noopener"
-            >X</a
-          >
-        </div>
-      </header>
+    <svg style="display: none">
+      <symbol id="icon-github" viewBox="0 0 16 16">
+        <path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" />
+      </symbol>
+      <symbol id="icon-farcaster" viewBox="3.5 3.5 13 13">
+        <path d="m15.692 5v1.352h-1.35v1.351h1.35v7.312h-2.262l-.001-.007-1.155-5.47a2.331 2.331 0 0 0 -2.277-1.848h-.005a2.33 2.33 0 0 0 -2.276 1.85l-1.156 5.475h-2.264v-7.311h1.351v-1.353h-1.35v-1.351z" />
+      </symbol>
+      <symbol id="icon-x" viewBox="-25 -25 350 321">
+        <path d="m236 0h46l-101 115 118 156h-92.6l-72.5-94.8-83 94.8h-46l107-123-113-148h94.9l65.5 86.6zm-16.1 244h25.5l-165-218h-27.4z" />
+      </symbol>
+    </svg>
 
-      <main class="main">
-        <section class="intro">
-          <h1 class="title">Seb's playground for<br />on-chain experiments</h1>
-        </section>
+    <header class="site-header">
+      <span class="wordmark">sebayaki.eth</span>
+      <nav class="social" aria-label="Social">
+        <a href="https://github.com/sebayaki" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg aria-hidden="true"><use href="#icon-github" /></svg>
+        </a>
+        <a href="https://farcaster.xyz/if" target="_blank" rel="noopener" aria-label="Farcaster">
+          <svg aria-hidden="true"><use href="#icon-farcaster" /></svg>
+        </a>
+        <a href="https://x.com/0xsebayaki" target="_blank" rel="noopener" aria-label="X">
+          <svg aria-hidden="true"><use href="#icon-x" /></svg>
+        </a>
+      </nav>
+    </header>
 
-        <section class="works">
-          <div class="works-header">
-            <h2>Projects</h2>
-            <span class="arrow"></span>
-          </div>
+    <main>
+      <h1 class="hero">Seb&rsquo;s playground <span>for on-chain experiments</span></h1>
 
-          <div class="project-list">
-            <!-- onchat -->
-            <article class="project" data-project="onchat">
-              <div class="project-content">
-                <div class="project-number">01</div>
-                <div class="project-info">
-                  <h3 class="project-title">
-                    OnChat
-                    <span class="badge">Live</span>
-                  </h3>
-                  <p class="project-tagline">
-                    A fully permissionless, on-chain chat protocol
-                  </p>
-                  <p class="project-description">
-                    Anyone can create on-chain chat channels, and chat creators
-                    earn ETH when users chat on their channels.
-                  </p>
-                  <div class="project-links">
-                    <a
-                      href="https://onchat.sebayaki.com"
-                      class="project-link"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      Visit Project
-                      <span class="link-arrow"></span>
-                    </a>
-                    <a
-                      href="https://farcaster.xyz/miniapps/4bo9FDQQDd1-/onchat"
-                      class="project-link project-link-farcaster"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      Mini App
-                      <span class="link-arrow"></span>
-                    </a>
-                    <a
-                      href="https://mint.club/token/base/ONCHAT"
-                      class="project-link project-link-mintclub"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      Token
-                      <span class="link-arrow"></span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="project-image">
-                <a
-                  href="https://onchat.sebayaki.com"
-                  target="_blank"
-                  rel="noopener"
-                  class="project-image-link"
-                >
-                  <div class="image-wrapper">
-                    <img
-                      src="assets/screenshots/onchat.jpg"
-                      alt="OnChat Project Screenshot"
-                      loading="lazy"
-                    />
-                  </div>
-                </a>
-              </div>
-            </article>
+      <section aria-labelledby="projects-title">
+        <h2 id="projects-title" class="section-label">Projects</h2>
 
-            <!-- signet -->
-            <article class="project" data-project="signet">
-              <div class="project-content">
-                <div class="project-number">02</div>
-                <div class="project-info">
-                  <h3 class="project-title">
-                    Signet
-                    <span class="badge">Live</span>
-                  </h3>
-                  <p class="project-tagline">
-                    Feature your cast on the on-chain spotlight ✨
-                  </p>
-                  <p class="project-description">
-                    Users can feature their cast on the on-chain spotlight by
-                    minting 100 SIGNET tokens.
-                  </p>
-                  <div class="project-links">
-                    <a
-                      href="https://signet.sebayaki.com"
-                      class="project-link"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      Visit Project
-                      <span class="link-arrow"></span>
-                    </a>
-                    <a
-                      href="https://farcaster.xyz/miniapps/RkN8wr33nYAz/signet"
-                      class="project-link project-link-farcaster"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      Mini App
-                      <span class="link-arrow"></span>
-                    </a>
-                    <a
-                      href="https://mint.club/token/base/SIGNET"
-                      class="project-link project-link-mintclub"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      Token
-                      <span class="link-arrow"></span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="project-image">
-                <a
-                  href="https://signet.sebayaki.com"
-                  target="_blank"
-                  rel="noopener"
-                  class="project-image-link"
-                >
-                  <div class="image-wrapper">
-                    <img
-                      src="assets/screenshots/signet.png"
-                      alt="Signet Project Screenshot"
-                      loading="lazy"
-                    />
-                  </div>
-                </a>
-              </div>
-            </article>
+        <!-- Newest first. Only the first image is eager (fetchpriority="high"); the rest use loading="lazy". -->
+        <ol class="projects" role="list">
+          <li class="project">
+            <div class="project-head">
+              <h3>BrainBIP</h3>
+              <span class="status">Live</span>
+              <time datetime="2026-10">Oct 2026</time>
+            </div>
+            <a class="project-media" href="https://brainbip.sebayaki.com" target="_blank" rel="noopener">
+              <img
+                src="assets/screenshots/brainbip.png"
+                width="1200"
+                height="630"
+                fetchpriority="high"
+                decoding="async"
+                alt="BrainBIP preview: memory connected to recovery words and four networks"
+              />
+            </a>
+            <p class="project-tagline">A wallet to remember.</p>
+            <p class="project-text">
+              Create 12 or 24 BIP39 recovery words from a passphrase, with Bitcoin, Ethereum, Solana
+              and Zcash addresses. An offline, open&#8209;source experiment.
+            </p>
+            <div class="project-links">
+              <a href="https://brainbip.sebayaki.com" target="_blank" rel="noopener">Visit Project</a>
+              <a href="https://github.com/sebayaki/BrainBIP" target="_blank" rel="noopener">Source</a>
+            </div>
+          </li>
 
-            <!-- mfermoon -->
-            <article class="project" data-project="mfermoon">
-              <div class="project-content">
-                <div class="project-number">03</div>
-                <div class="project-info">
-                  <h3 class="project-title">
-                    mfermoon
-                    <span class="badge">Live</span>
-                  </h3>
-                  <p class="project-tagline">
-                    one small burn for mfermoon, one giant leap for mfer-kind
-                  </p>
-                  <p class="project-description">
-                    $mfer child token that burns 10% on sells through a
-                    decentralized Moon contract.
-                  </p>
-                  <div class="project-links">
-                    <a
-                      href="https://mfer.sebayaki.com"
-                      class="project-link"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      Visit Project
-                      <span class="link-arrow"></span>
-                    </a>
-                    <a
-                      href="https://farcaster.xyz/miniapps/inkrK0hY9DI0/mfermoon-"
-                      class="project-link project-link-farcaster"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      Mini App
-                      <span class="link-arrow"></span>
-                    </a>
-                    <a
-                      href="https://mint.club/token/base/MFERMOON"
-                      class="project-link project-link-mintclub"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      Token
-                      <span class="link-arrow"></span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="project-image">
-                <a
-                  href="https://mfer.sebayaki.com"
-                  target="_blank"
-                  rel="noopener"
-                  class="project-image-link"
-                >
-                  <div class="image-wrapper">
-                    <img
-                      src="assets/screenshots/mfermoon.png"
-                      alt="mfermoon Project Screenshot"
-                      loading="lazy"
-                    />
-                  </div>
-                </a>
-              </div>
-            </article>
-          </div>
-        </section>
-      </main>
+          <li class="project">
+            <div class="project-head">
+              <h3>Boost Town</h3>
+              <span class="status">Live</span>
+              <time datetime="2026-09">Sep 2026</time>
+            </div>
+            <a class="project-media" href="https://boost.town" target="_blank" rel="noopener">
+              <img
+                src="assets/screenshots/boosttown.jpg"
+                width="1200"
+                height="630"
+                loading="lazy"
+                decoding="async"
+                alt="Boost Town preview: amber spotlight beams over a row of stock token logos"
+              />
+            </a>
+            <p class="project-tagline">Spotlight posts.<br />Reward readers with stock tokens.</p>
+            <p class="project-text">
+              Pay USDG to put an X post in the spotlight on Robinhood Chain. Half of every post
+              funds Stock Token raffles, and 30% buys and burns BOOST.
+            </p>
+            <div class="project-links">
+              <a href="https://boost.town" target="_blank" rel="noopener">Visit Project</a>
+              <a href="https://lptoken.fun/trade/robinhood/0xbe63328ba305f657c16e546702f90b506133a50e" target="_blank" rel="noopener">Token</a>
+            </div>
+          </li>
 
-      <footer class="footer">
-        <div class="footer-content">
-          <p>&copy; 2025 sebayaki.eth</p>
-          <div class="footer-links">
-            <a href="https://github.com/sebayaki" target="_blank" rel="noopener"
-              >GitHub</a
-            >
-            <a href="https://farcaster.xyz/if" target="_blank" rel="noopener"
-              >Farcaster</a
-            >
-            <a href="https://x.com/0xsebayaki" target="_blank" rel="noopener"
-              >X</a
-            >
-          </div>
-        </div>
-      </footer>
-    </div>
+          <li class="project">
+            <div class="project-head">
+              <h3>OnChat</h3>
+              <span class="status">Live</span>
+              <time datetime="2025-12">Dec 2025</time>
+            </div>
+            <a class="project-media" href="https://onchat.sebayaki.com" target="_blank" rel="noopener">
+              <img
+                src="assets/screenshots/onchat.jpg"
+                width="1200"
+                height="630"
+                loading="lazy"
+                decoding="async"
+                alt="OnChat preview: the OnChat logo on the screen of a retro desktop computer"
+              />
+            </a>
+            <p class="project-tagline">A fully permissionless, on-chain chat protocol</p>
+            <p class="project-text">
+              Anyone can create on-chain chat channels, and chat creators earn ETH when users chat
+              on their channels.
+            </p>
+            <div class="project-links">
+              <a href="https://onchat.sebayaki.com" target="_blank" rel="noopener">Visit Project</a>
+              <a href="https://farcaster.xyz/miniapps/4bo9FDQQDd1-/onchat" target="_blank" rel="noopener">Mini App</a>
+              <a href="https://mint.club/token/base/ONCHAT" target="_blank" rel="noopener">Token</a>
+            </div>
+          </li>
 
-    <script src="script.js"></script>
+          <li class="project">
+            <div class="project-head">
+              <h3>Signet</h3>
+              <span class="status">Live</span>
+              <time datetime="2025-10">Oct 2025</time>
+            </div>
+            <a class="project-media" href="https://signet.sebayaki.com" target="_blank" rel="noopener">
+              <img
+                src="assets/screenshots/signet.png"
+                width="1200"
+                height="630"
+                loading="lazy"
+                decoding="async"
+                alt="Signet preview: a Farcaster cast featured in the on-chain spotlight"
+              />
+            </a>
+            <p class="project-tagline">Feature your cast on the on-chain spotlight ✨</p>
+            <p class="project-text">
+              Users can feature their cast on the on-chain spotlight by minting 100 SIGNET tokens.
+            </p>
+            <div class="project-links">
+              <a href="https://signet.sebayaki.com" target="_blank" rel="noopener">Visit Project</a>
+              <a href="https://farcaster.xyz/miniapps/RkN8wr33nYAz/signet" target="_blank" rel="noopener">Mini App</a>
+              <a href="https://mint.club/token/base/SIGNET" target="_blank" rel="noopener">Token</a>
+            </div>
+          </li>
+
+          <li class="project">
+            <div class="project-head">
+              <h3>mfermoon</h3>
+              <span class="status">Live</span>
+              <time datetime="2024-12">Dec 2024</time>
+            </div>
+            <a class="project-media" href="https://mfer.sebayaki.com" target="_blank" rel="noopener">
+              <img
+                src="assets/screenshots/mfermoon.png"
+                width="2812"
+                height="1640"
+                loading="lazy"
+                decoding="async"
+                alt="mfermoon preview: a moon mfer avatar above the buy $mfermoon and moon buttons"
+              />
+            </a>
+            <p class="project-tagline">one small burn for mfermoon, one giant leap for mfer-kind</p>
+            <p class="project-text">
+              $mfer child token that burns 10% on sells through a decentralized Moon contract.
+            </p>
+            <div class="project-links">
+              <a href="https://mfer.sebayaki.com" target="_blank" rel="noopener">Visit Project</a>
+              <a href="https://mint.club/token/base/MFERMOON" target="_blank" rel="noopener">Token</a>
+            </div>
+          </li>
+        </ol>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 sebayaki.eth</p>
+      <div class="social">
+        <a href="https://github.com/sebayaki" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg aria-hidden="true"><use href="#icon-github" /></svg>
+        </a>
+        <a href="https://farcaster.xyz/if" target="_blank" rel="noopener" aria-label="Farcaster">
+          <svg aria-hidden="true"><use href="#icon-farcaster" /></svg>
+        </a>
+        <a href="https://x.com/0xsebayaki" target="_blank" rel="noopener" aria-label="X">
+          <svg aria-hidden="true"><use href="#icon-x" /></svg>
+        </a>
+      </div>
+    </footer>
   </body>
 </html>
